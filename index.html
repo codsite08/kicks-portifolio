@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KICKS. | Exclusividade & Streetwear</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 1.1 PRELOADER DE ENTRADA -->
+    <div id="preloader">
+        <div class="preloader-content">
+            <span class="preloader-logo">KICKS<span>.</span></span>
+            <div class="preloader-bar"><div class="preloader-progress"></div></div>
+        </div>
+    </div>
+
+    <!-- 1.2 CURSOR PERSONALIZADO -->
+    <div class="custom-cursor"></div>
+    <div class="custom-cursor-dot"></div>
+
+    <!-- CABEÇALHO / NAVBAR -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="#" class="logo">KICKS<span>.</span></a>
+
+            <nav class="nav-menu">
+                <a href="#lancamentos" class="nav-link">Lançamentos</a>
+                <a href="#exclusivo" class="nav-link">Exclusivo</a>
+            </nav>
+
+            <div class="header-actions">
+                <!-- BOTÃO DE BUSCA -->
+                <button class="icon-btn search-trigger" aria-label="Abrir Busca">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                </button>
+                <button class="icon-btn cart-icon" aria-label="Abrir Carrinho">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                    <span class="cart-badge">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- 3.1 MODAL DE BUSCA EM TEMPO REAL -->
+    <div class="search-modal-overlay" id="search-modal">
+        <div class="search-modal-container">
+            <div class="search-input-wrapper">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                <input type="text" id="search-input" placeholder="Digite o modelo, marca ou cor (ex: Jordan, Nike)..." autocomplete="off">
+                <button class="btn-fechar-search">&times;</button>
+            </div>
+            <div class="search-results" id="search-results">
+                <!-- Resultados renderizados via JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- HERO SECTION -->
+    <section class="hero-section">
+        <div class="container hero-container">
+            <div class="hero-content reveal">
+                <span class="hero-tag">
+                    <span class="dot"></span> Autenticidade garantida em cada par
+                </span>
+                <h1 class="hero-title">A RUA É A SUA <span>PASSARELA.</span></h1>
+                <p class="hero-description">
+                    Descubra os sneakers mais exclusivos e limitados do mercado. Curadoria rigorosa com verificação de autenticidade em cada detalhe.
+                </p>
+                <div class="hero-actions">
+                    <a href="#lancamentos" class="btn btn-primary">EXPLORAR COLEÇÃO</a>
+                    <div class="preco-destaque">
+                        <small>A PARTIR DE</small>
+                        <strong>R$ 899,00</strong>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CONTAINER DO TÊNIS 3D -->
+            <div class="hero-image-container reveal">
+                <div class="blob-bg"></div>
+                <img src="images/jordan-main.png" alt="Air Jordan Patent Black Red" class="sneaker-img">
+            </div>
+        </div>
+    </section>
+
+    <!-- FAIXA MARQUEE -->
+    <div class="marquee-strip">
+        <div class="marquee-track">
+            <span>NIKE</span><span>JORDAN</span><span>ADIDAS</span><span>PUMA</span><span>NEW BALANCE</span><span>VANS</span>
+            <span>NIKE</span><span>JORDAN</span><span>ADIDAS</span><span>PUMA</span><span>NEW BALANCE</span><span>VANS</span>
+        </div>
+    </div>
+
+    <!-- VITRINE DE PRODUTOS -->
+    <section class="produtos-section container" id="lancamentos">
+        <div class="section-header reveal">
+            <div>
+                <span class="section-subtitle">SUA COLEÇÃO DOS SONHOS</span>
+                <h2 class="section-title">LANÇAMENTOS EM DESTAQUE</h2>
+            </div>
+            
+            <div class="filtros-categoria">
+                <button class="btn-filtro ativo">Todos</button>
+                <button class="btn-filtro">Jordan</button>
+                <button class="btn-filtro">Nike</button>
+                <button class="btn-filtro">New Balance</button>
+            </div>
+        </div>
+
+        <div class="grid-produtos">
+            <!-- PRODUTO 1 -->
+            <div class="card-produto reveal" data-id="p1" data-nome="Air Jordan 1 High OG" data-categoria="Jordan" data-preco="1299.00" data-imagem="https://images.unsplash.com/photo-1552346154-21d32810aba3?q=80&w=800&auto=format&fit=crop" data-descricao="O clássico atemporal que definiu a cultura dos sneakers. Couro legítimo e amortecimento Nike Air no calcanhar.">
+                <div class="card-imagem">
+                    <span class="badge badge-exclusivo">EXCLUSIVO</span>
+                    <button class="btn-favorito" aria-label="Favoritar">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                    </button>
+                    <!-- 3.2 BOTAO DE ESPIAR (QUICK VIEW) -->
+                    <button class="btn-quick-view">ESPIADA RÁPIDA</button>
+                    <img src="https://images.unsplash.com/photo-1552346154-21d32810aba3?q=80&w=800&auto=format&fit=crop" alt="Air Jordan 1 High OG">
+                </div>
+                <div class="card-detalhes">
+                    <span class="categoria-produto">Jordan</span>
+                    <h3 class="nome-produto">Air Jordan 1 High OG</h3>
+                    <div class="preco-produto">R$ 1.299,00</div>
+                    
+                    <div class="seletor-tamanho">
+                        <label>Selecione o tamanho:</label>
+                        <div class="tamanhos-grid">
+                            <button class="btn-tamanho">39</button>
+                            <button class="btn-tamanho ativo">40</button>
+                            <button class="btn-tamanho">41</button>
+                            <button class="btn-tamanho">42</button>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-add-carrinho">ADICIONAR AO CARRINHO</button>
+                </div>
+            </div>
+
+            <!-- PRODUTO 2 -->
+            <div class="card-produto reveal" data-id="p2" data-nome="Nike Air Max Pulse" data-categoria="Nike" data-preco="849.00" data-imagem="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?q=80&w=800&auto=format&fit=crop" data-descricao="Estilo urbano futurista mesclado com o máximo conforto da bolha de ar Air Max de última geração.">
+                <div class="card-imagem">
+                    <span class="badge badge-desconto">-15%</span>
+                    <button class="btn-favorito" aria-label="Favoritar">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                    </button>
+                    <button class="btn-quick-view">ESPIADA RÁPIDA</button>
+                    <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?q=80&w=800&auto=format&fit=crop" alt="Nike Air Max Pulse">
+                </div>
+                <div class="card-detalhes">
+                    <span class="categoria-produto">Nike</span>
+                    <h3 class="nome-produto">Nike Air Max Pulse</h3>
+                    <div class="preco-produto">R$ 849,00 <span class="preco-antigo">R$ 999,00</span></div>
+                    
+                    <div class="seletor-tamanho">
+                        <label>Selecione o tamanho:</label>
+                        <div class="tamanhos-grid">
+                            <button class="btn-tamanho">38</button>
+                            <button class="btn-tamanho">39</button>
+                            <button class="btn-tamanho ativo">40</button>
+                            <button class="btn-tamanho">41</button>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-add-carrinho">ADICIONAR AO CARRINHO</button>
+                </div>
+            </div>
+
+            <!-- PRODUTO 3 -->
+            <div class="card-produto reveal" data-id="p3" data-nome="New Balance 9060 Modern" data-categoria="New Balance" data-preco="1199.00" data-imagem="https://images.unsplash.com/photo-1539185441755-769473a23570?q=80&w=800&auto=format&fit=crop" data-descricao="Design conceitual com entressola exagerada e tecnologia ABZORB para absorção perfeita de impactos.">
+                <div class="card-imagem">
+                    <button class="btn-favorito" aria-label="Favoritar">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                    </button>
+                    <button class="btn-quick-view">ESPIADA RÁPIDA</button>
+                    <img src="https://images.unsplash.com/photo-1539185441755-769473a23570?q=80&w=800&auto=format&fit=crop" alt="New Balance 9060 Modern">
+                </div>
+                <div class="card-detalhes">
+                    <span class="categoria-produto">New Balance</span>
+                    <h3 class="nome-produto">New Balance 9060 Modern</h3>
+                    <div class="preco-produto">R$ 1.199,00</div>
+                    
+                    <div class="seletor-tamanho">
+                        <label>Selecione o tamanho:</label>
+                        <div class="tamanhos-grid">
+                            <button class="btn-tamanho">39</button>
+                            <button class="btn-tamanho ativo">40</button>
+                            <button class="btn-tamanho">41</button>
+                            <button class="btn-tamanho">42</button>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-add-carrinho">ADICIONAR AO CARRINHO</button>
+                </div>
+            </div>
+
+            <!-- PRODUTO 4 -->
+            <div class="card-produto reveal" data-id="p4" data-nome="Nike Superrap Red Edition" data-categoria="Nike" data-preco="899.00" data-imagem="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=800&auto=format&fit=crop" data-descricao="Edição marcante na cor vermelha com estrutura respirável e solado de alta tração urbana.">
+                <div class="card-imagem">
+                    <span class="badge badge-popular">POPULAR</span>
+                    <button class="btn-favorito" aria-label="Favoritar">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                    </button>
+                    <button class="btn-quick-view">ESPIADA RÁPIDA</button>
+                    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=800&auto=format&fit=crop" alt="Nike Superrap Red Edition">
+                </div>
+                <div class="card-detalhes">
+                    <span class="categoria-produto">Nike</span>
+                    <h3 class="nome-produto">Nike Superrap Red Edition</h3>
+                    <div class="preco-produto">R$ 899,00</div>
+                    
+                    <div class="seletor-tamanho">
+                        <label>Selecione o tamanho:</label>
+                        <div class="tamanhos-grid">
+                            <button class="btn-tamanho">38</button>
+                            <button class="btn-tamanho ativo">39</button>
+                            <button class="btn-tamanho">40</button>
+                            <button class="btn-tamanho">41</button>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-add-carrinho">ADICIONAR AO CARRINHO</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BANNER PROMOCIONAL -->
+    <section class="banner-promocional container reveal" id="exclusivo">
+        <div class="banner-content">
+            <span class="hero-tag">EDIÇÃO ULTRA LIMITADA</span>
+            <h2>OFF-WHITE x NIKE AIR FORCE 1</h2>
+            <p>Apenas 50 pares produzidos para o mercado brasileiro. Design desconstruído assinado pela lendária collab.</p>
+            <button class="btn btn-primary">GARANTIR MEU PAR</button>
+        </div>
+    </section>
+
+    <!-- RODAPÉ -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <a href="#" class="logo">KICKS<span>.</span></a>
+                <p>A loja referência em cultura streetwear e sneakers de alto valor no Brasil.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Navegação</h4>
+                <ul>
+                    <li><a href="#lancamentos">Lançamentos</a></li>
+                    <li><a href="#exclusivo">Coleção Rara</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Atendimento</h4>
+                <p>suporte@kicks.com.br</p>
+                <p>Seg. a Sex. - 09h às 18h</p>
+            </div>
+        </div>
+        <div class="footer-bottom container">
+            <p>&copy; 2026 KICKS. Desenvolvido para Portfólio Front-End.</p>
+        </div>
+    </footer>
+
+    <!-- 3.2 MODAL QUICK VIEW -->
+    <div class="modal-quickview-overlay" id="quickview-modal">
+        <div class="modal-quickview">
+            <button class="btn-fechar-modal">&times;</button>
+            <div class="qv-grid">
+                <div class="qv-imagem">
+                    <img src="" id="qv-img" alt="">
+                </div>
+                <div class="qv-info">
+                    <span class="categoria-produto" id="qv-categoria">JORDAN</span>
+                    <h2 id="qv-nome">Nome do Tênis</h2>
+                    <div class="preco-produto" id="qv-preco">R$ 0,00</div>
+                    <p class="qv-descricao" id="qv-descricao">Descrição do produto...</p>
+                    
+                    <div class="seletor-tamanho">
+                        <label>Selecione o Tamanho:</label>
+                        <div class="tamanhos-grid" id="qv-tamanhos">
+                            <button class="btn-tamanho">38</button>
+                            <button class="btn-tamanho ativo">39</button>
+                            <button class="btn-tamanho">40</button>
+                            <button class="btn-tamanho">41</button>
+                            <button class="btn-tamanho">42</button>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary" id="qv-btn-add">ADICIONAR AO CARRINHO</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- GAVETA DO CARRINHO (DRAWER) -->
+    <div class="cart-overlay"></div>
+    <aside class="cart-drawer">
+        <div class="cart-header">
+            <h3>Seu Carrinho</h3>
+            <button class="btn-fechar-carrinho" aria-label="Fechar carrinho">&times;</button>
+        </div>
+        
+        <div class="cart-body">
+            <!-- Conteúdo renderizado dinamicamente -->
+        </div>
+
+        <div class="cart-footer">
+            <!-- 3.3 CÁLCULO DE FRETE NO CARRINHO -->
+            <div class="cart-frete">
+                <label for="cep-input">CÁLCULO DE FRETE</label>
+                <div class="frete-input-group">
+                    <input type="text" id="cep-input" placeholder="Digite seu CEP" maxlength="9">
+                    <button class="btn-calcular-frete">CALCULAR</button>
+                </div>
+                <div class="frete-resultado" id="frete-resultado"></div>
+            </div>
+
+            <div class="cart-subtotal">
+                <span>Subtotal</span>
+                <strong id="cart-total-val">R$ 0,00</strong>
+            </div>
+            <button class="btn btn-primary btn-checkout">FINALIZAR PEDIDO VIA WHATSAPP</button>
+        </div>
+    </aside>
+
+    <script src="script.js"></script>
+</body>
+</html>
